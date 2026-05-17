@@ -1,0 +1,40 @@
+.env
+# Maven target folder
+/target/
+
+# Eclipse / Spring Tool Suite
+.classpath
+.project
+.settings/
+.factorypath
+
+# IntelliJ (if ever used)
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Spring Boot
+*.h2.db
+*.mv.db
+
+# Compiled files
+*.class
+
+# Package files
+*.jar
+*.war
+
+# Spring Boot devtools
+spring-devtools.properties
+
+# Maven wrapper (optional keep if you use wrapper)
+.mvn/
+mvnw
+mvnw.cmd
