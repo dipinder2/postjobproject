@@ -28,7 +28,7 @@ public class SecurityConfig {
                         )
                         .permitAll()
 
-                        .requestMatchers("/jobs/**")
+                        .requestMatchers("api/v1/jobs/**")
                         .authenticated()
 
                         .anyRequest()

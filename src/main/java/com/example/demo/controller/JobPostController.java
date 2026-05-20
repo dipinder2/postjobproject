@@ -11,7 +11,7 @@ import com.example.demo.model.JobPost;
 import com.example.demo.services.JobPostService;
 
 @RestController
-@RequestMapping("/jobs")
+@RequestMapping("api/v1/jobs")
 public class JobPostController {
 
     @Autowired
