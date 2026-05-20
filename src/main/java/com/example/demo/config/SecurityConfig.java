@@ -17,28 +17,18 @@ public class SecurityConfig {
             HttpSecurity http
     ) throws Exception {
 
-        http
-                .csrf(csrf -> csrf.disable())
-
-                .authorizeHttpRequests(auth -> auth
-
-                        .requestMatchers(
+        http.csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(auth -> auth.requestMatchers(
                                 "/api/v1/twilio/otp/send",
-                                "/api/v1/twilio/otp/verify"
-                        )
+                                "/api/v1/twilio/otp/verify")
                         .permitAll()
-
-                        .requestMatchers("api/v1/jobs/**")
+                        .requestMatchers("api/v1/jobs/**","api/v1/users/**")
                         .authenticated()
-
                         .anyRequest()
-                        .permitAll()
-                )
-
+                        .permitAll())
                 .addFilterBefore(
                         new JWTMiddleware(),
-                        UsernamePasswordAuthenticationFilter.class
-                );
+                        UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }

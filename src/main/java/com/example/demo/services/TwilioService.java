@@ -17,15 +17,6 @@ public class TwilioService {
     }
 
     // ----------------------------
-    // DEBUG
-    // ----------------------------
-    public void debug() {
-        System.out.println("ACCOUNT SID: " + config.getAccountSid());
-        System.out.println("VERIFY SID: " + config.getVerifySid());
-        System.out.println("FROM NUMBER: " + config.getFromNumber());
-    }
-
-    // ----------------------------
     // SEND SMS
     // ----------------------------
     public String sendSms(String toPhone, String message) {
